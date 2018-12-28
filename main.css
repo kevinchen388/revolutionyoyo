@@ -1,0 +1,202 @@
+/*-----Global-----*/
+@font-face {
+   font-family: Bebas; 
+   src: url(images/BEBAS.ttf);
+} 
+@font-face {
+    font-family: GeosansLight;
+    src: url(images/GeosansLight.ttf);
+}
+@font-face {
+    font-family: Offerings;
+    src: url(images/Offerings.otf);
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+h1 {
+    color: white;
+    font-size: 48px;
+}
+p {
+    color: white;
+    font-size: 16px;
+}
+h3 {
+    color: white;
+    font-size: 4vw;
+}
+
+
+/*----parallax----*/
+section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+section.sec1 {
+    background: url(images/cov.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.sec2 {
+    background: url(images/speakin.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.sec3 {
+    background: url(images/moana.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.sec4 {
+    background: url(images/gfest.JPG);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.secText {
+    height: auto;
+    padding: 2vw 10vw;
+}
+section.secText h1{
+    margin: 0;
+    padding: 0;
+    font-size: 3.5vw;
+    color: gray;
+    font-family: Bebas;
+    text-align: center;
+    
+}
+section.secText p{
+    font-size: 1.7vw;
+    color: grey;
+    font-family: GeosansLight;
+    text-align: center;
+}
+
+/*-----nav-----*/
+
+nav {
+    padding: .5vw 10vw;
+    height: 100px;
+    line-height: 100px;
+    background-color: transparent;
+    
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+nav a img {
+    vertical-align: middle;
+    
+}
+.logo {
+    width: 100%;
+    height:auto;
+}
+.sm {
+    margin: 1.1vw;
+    max-width: 100%;
+    height:auto;
+    
+}
+.navText{
+    margin: 1.1vw;
+    font-family: Offerings;
+    font-size: 2vw; 
+}
+nav a:nth-child(5) {
+    float: right;
+}
+nav a:nth-child(6) {
+    float: right;
+}
+nav a:nth-child(7) {
+    float: right;
+}
+
+
+/*-----contact form-----*/
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+/*-----responsive-----*/
+@media only screen and (max-width: 768px) {
+    header {
+        width: 96%;
+        margin: 30px auto 100px auto;
+        text-align: left;
+    }
+    header p {
+        width: 96%;
+        margin: 30px auto 100px auto;
+        text-align: left;
+    }
+    h2 {
+        text-align: left;
+    }
+    footer {
+        text-align: left;
+        width: 96%;
+        margin: 20px auto 50px auto;
+    }
+    .projects a img {
+        margin: 2%;
+        width: 96%;
+    }
+    .graphicdesign a img {
+        margin: 2%;
+        width: 96%;
+    }
+    .performance a img {
+        margin: 2%;
+        width: 96%;
+    }
+}

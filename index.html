@@ -1,1 +1,93 @@
-Yo
+<?php
+if (isset($_POST['name']) && isset(_POST['email'])) {
+$name = $_POST['name'];
+$email = $_POST['email'];
+$to = 'kevin.c388@gmail.com';
+$subject = "Test website";
+$body = '<html> 
+            <body>
+                <p>Name: '.$name.</p>
+                <p>Email: '.$email.' </p>
+            </body>
+        </html>';
+$headers = "From: ".$name." <".$email.">\r\n";
+$headers .= "Reply-To: ".$email."\r\n";
+$headers .= "MIME-Version: 1.0\rn\";
+$headers .= "Content-type: text/html; charset=utf-8";
+
+$send = mail($to, $subject, $body, $headers);
+if ($send) {
+    echo '<br>';
+    echo 'Thanks for contacting us! We will get back to you shortly.';
+} else {
+    echo 'error';
+}
+}
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Revolution Chinese Yoyo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+   
+</head>
+<body>
+    
+  
+    <section class="sec1">
+        <nav class="clearfix">
+            <a class="logo" href="#"><img src="images/logo.png" alt="icon"></a>
+            <a class="navText" href="#about">about</a>
+            <a class="navText" href="#performance">performance</a>
+            <a class="navText" href="#contact">contact</a>
+            
+            <a href="https://www.youtube.com/user/diabolorevolution"><img class ="sm" src="images/yt.png" alt="icon"></a>
+            <a href="https://www.instagram.com/revolutionyoyo/"><img class ="sm" src="images/ig.png" alt="icon"></a>
+            <a href="https://www.facebook.com/Revolution.Chinese.Yoyo/"><img class ="sm" src="images/fb.png" alt="icon"></a>
+        </nav>
+    </section>
+    <section class="secText" id="about">
+        <h1>ABOUT</h1>
+        <p>Founded in the Winter of 2009, Revolution is the Chinese Yoyo team at the University of Michigan. We aim to promote Chinese Yoyo as a performance art form as well as bring awareness to A/PIA culture.</p>
+    </section>
+    <section class="sec2"></section>
+    <section class="secText" id="performance">
+        <h1>PERFORMANCE</h1>
+        <p>Revolution, in collaboration with Photonix glowsticking, hosts our own show each Spring: Yotonix. <br>
+            Revolution has also performed at some of the biggest events on campus including CelebrASIA, Dem Viet Nam Show, Huaren Culture Show, Generation APA, Gayz Craze, TEDxUM, Lunar Ball, Festifall, Relay for Life, G-Men concerts, Dance Mix, and Dance Marathon. <br>
+            We have also been invited to perform at campuses throughout the Midwest, including MSU, OSU, UToledo, UChicago, GVSU, and Northwestern. </p>
+    </section>
+    <section class="sec3"></section>
+    <section class="secText" id="contact">
+        <h1>CONTACT</h1>
+        <p>Revolution holds open practices for University of Michigan students every week and welcomes everyone to come learn how to       Chinese Yoyo! <br>
+            For more information, or to schedule a performance or workshop, please contact us below.</p>
+        <div class="container">
+            <form action="contact.php" method="post">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter name..">
+
+                <label for="email">Email address</label>
+                <input type="text" id="email" name="email" placeholder="Enter email address..">
+
+                <label for="subj">Subject</label>
+                <input type="text" id="subj" name="subj" placeholder="Enter email subject..">
+
+                <label for="mess">Message</label>
+                <textarea id="mess" name="mess" placeholder="Enter message.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </section>
+    <section class="sec4"></section>
+ 
+  
+</body>
+</html>
