@@ -1,26 +1,30 @@
 <?php
-if (isset($_POST['name']) && isset(_POST['email'])) {
+if (isset($_POST['submit']) && isset($_POST['name']) && isset(_POST['email'])) {
 $name = $_POST['name'];
 $email = $_POST['email'];
+
+//send mail
 $to = 'kevin.c388@gmail.com';
 $subject = "Test website";
 $body = '<html> 
             <body>
-                <p>Name: '.$name.</p>
+                <p>Name: '.$name.'</p>
+                <br>
                 <p>Email: '.$email.' </p>
             </body>
         </html>';
-$headers = "From: ".$name." <".$email.">\r\n";
-$headers .= "Reply-To: ".$email."\r\n";
-$headers .= "MIME-Version: 1.0\rn\";
-$headers .= "Content-type: text/html; charset=utf-8";
+ $headers  ="From:".$name."<".$email.">\r\n";
+ $headers .="reply-To:".$email."\r\n";
+ $headers .="NINE-Version: 1.0\r\n";
+ $headers .="Content-type: text/html; charset=utf-8";
 
+//sending process
 $send = mail($to, $subject, $body, $headers);
 if ($send) {
-    echo '<br>';
-    echo 'Thanks for contacting us! We will get back to you shortly.';
+    echo "<br>";
+    echo "Thanks for contacting us! We will get back to you shortly.";
 } else {
-    echo 'error';
+    echo "error";
 }
 }
 ?>
@@ -70,16 +74,16 @@ if ($send) {
             <form action="contact.php" method="post">
 
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter name..">
+                <input type="text" id="name" name="name" placeholder="Enter name...">
 
                 <label for="email">Email address</label>
-                <input type="text" id="email" name="email" placeholder="Enter email address..">
+                <input type="text" id="email" name="email" placeholder="Enter email address...">
 
                 <label for="subj">Subject</label>
-                <input type="text" id="subj" name="subj" placeholder="Enter email subject..">
+                <input type="text" id="subj" name="subj" placeholder="Enter email subject...">
 
                 <label for="mess">Message</label>
-                <textarea id="mess" name="mess" placeholder="Enter message.." style="height:200px"></textarea>
+                <textarea class="msgbox" id="mess" name="mess" placeholder="Enter message..." style="height:150px"></textarea>
 
                 <input type="submit" value="Submit">
 
