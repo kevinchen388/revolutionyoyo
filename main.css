@@ -46,7 +46,7 @@ section {
     box-sizing: border-box;
 }
 section.sec1 {
-    background: url(images/cov.jpg);
+    background: url(images/herohigh.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -64,7 +64,7 @@ section.sec3 {
     background-attachment: fixed;
 }
 section.sec4 {
-    background: url(images/gfest.JPG);
+    background: url(images/footer.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -96,7 +96,6 @@ nav {
     height: 100px;
     line-height: 100px;
     background-color: transparent;
-    
 }
 nav a {
     color: white;
@@ -167,7 +166,6 @@ input[type=submit]:hover {
 .msgbox {
     font-family: sans-serif;
 }
-
 
 /*-----responsive-----*/
 @media only screen and (max-width: 768px) {
