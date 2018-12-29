@@ -13,6 +13,7 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     margin: 0;
@@ -169,6 +170,37 @@ input[type=submit]:hover {
 
 /*-----responsive-----*/
 @media only screen and (max-width: 768px) {
+    /*----parallax----*/
+    section {
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    section.sec1 {
+        background: url(images/Mcov.png);
+        background-size: cover;
+  
+        background-attachment: fixed;
+        background-position: top right;
+    }
+    section.sec2 {
+        background: url(images/Mspeakin.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    section.sec3 {
+        background: url(images/Mmoana.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    section.sec4 {
+        background: url(images/Mgfest.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
     header {
         width: 96%;
         margin: 30px auto 100px auto;
@@ -179,24 +211,71 @@ input[type=submit]:hover {
         margin: 30px auto 100px auto;
         text-align: left;
     }
-    h2 {
-        text-align: left;
+    section.secText {
+        height: auto;
+        padding: 2vw 10vw;
     }
-    footer {
-        text-align: left;
-        width: 96%;
-        margin: 20px auto 50px auto;
+    section.secText h1{
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        color: gray;
+        font-family: Bebas;
+        text-align: center;
+
     }
+    section.secText p{
+        font-size: 17px;
+        color: grey;
+        font-family: GeosansLight;
+        text-align: center;
+    }
+    
     .projects a img {
         margin: 2%;
         width: 96%;
     }
-    .graphicdesign a img {
-        margin: 2%;
-        width: 96%;
+    /*-----nav-----*/
+
+    nav {
+        padding: .5vw 10vw;
+        width: 100%;
+        height: auto;
+        line-height: 100px;
+        background-color: transparent;
     }
-    .performance a img {
-        margin: 2%;
-        width: 96%;
+    nav a {
+        color: white;
+        text-decoration: none;
+        
+    }
+    nav a img {
+        vertical-align: middle;
+        max-width: 20vw;
+        height: auto;
+    }
+    .logo {
+        width: 100%;
+        height:auto;
+    }
+    .sm {
+        margin: 1px;
+        max-width: 70%;
+        height:auto;
+
+    }
+    .navText{
+        visibility: hidden;
+        font-size: 0.002px;
+    }
+    nav a:nth-child(5) {
+        float: right;
+        margin-right: 16vw;
+    }
+    nav a:nth-child(6) {
+        float: right;
+    }
+    nav a:nth-child(7) {
+        float: right;
     }
 }
