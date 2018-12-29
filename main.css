@@ -73,6 +73,7 @@ section.sec4 {
 section.secText {
     height: auto;
     padding: 2vw 10vw;
+    
 }
 section.secText h1{
     margin: 0;
@@ -170,6 +171,10 @@ input[type=submit]:hover {
 
 /*-----responsive-----*/
 @media only screen and (max-width: 768px) {
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
     /*----parallax----*/
     section {
         width: 100%;
@@ -181,7 +186,7 @@ input[type=submit]:hover {
         background-size: cover;
   
         background-attachment: fixed;
-        background-position: top right;
+        background-position: center;
     }
     section.sec2 {
         background: url(images/Mspeakin.jpg);
@@ -201,19 +206,10 @@ input[type=submit]:hover {
         background-position: center;
         background-attachment: fixed;
     }
-    header {
-        width: 96%;
-        margin: 30px auto 100px auto;
-        text-align: left;
-    }
-    header p {
-        width: 96%;
-        margin: 30px auto 100px auto;
-        text-align: left;
-    }
+
     section.secText {
         height: auto;
-        padding: 2vw 10vw;
+        padding: 4vw 10vw;
     }
     section.secText h1{
         margin: 0;
@@ -231,10 +227,6 @@ input[type=submit]:hover {
         text-align: center;
     }
     
-    .projects a img {
-        margin: 2%;
-        width: 96%;
-    }
     /*-----nav-----*/
 
     nav {
@@ -262,20 +254,13 @@ input[type=submit]:hover {
         margin: 1px;
         max-width: 70%;
         height:auto;
-
     }
     .navText{
         visibility: hidden;
         font-size: 0.002px;
     }
     nav a:nth-child(5) {
-        float: right;
         margin-right: 16vw;
     }
-    nav a:nth-child(6) {
-        float: right;
-    }
-    nav a:nth-child(7) {
-        float: right;
-    }
+
 }
